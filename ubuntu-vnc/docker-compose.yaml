@@ -1,0 +1,8 @@
+services:
+  vnc-desktop:
+    build: .
+    container_name: my_vnc_container
+    ports:
+      - "5901:5901"   # Maps container VNC port 5901 to host port 5901
+    shm_size: '1gb'    # Optional: improves GUI performance
+    restart: unless-stopped
